@@ -27,3 +27,7 @@ under prisma copy schema and paste in schema.prisma
 create schema  then migrate your schema
 npx prisma migrate dev --name init
 then npx prisma studio
+
+### step 5
+register page
+
