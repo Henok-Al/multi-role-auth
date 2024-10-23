@@ -3,11 +3,20 @@
 import { useFormState } from "react-dom";
 import Link from "next/link";
 import { signUpCredentials } from "@/lib/actions";
+import { RegisterButton } from "@/components/button";
 
 const FormRegister = () => {
   const [state, formAction] = useFormState(signUpCredentials, null);
   return (
     <form action={formAction} className="space-y-6">
+      {state?.message ? (
+        <div
+          className="p-4 text-sm text-red-800 rounded-lg bg-red-100 role"
+          role="alert"
+        >
+          <span className="font-medium">{state?.message}</span>
+        </div>
+      ) : null}
       <div>
         <label
           htmlFor="name"
@@ -84,12 +93,7 @@ const FormRegister = () => {
           </span>
         </div>
       </div>
-      <button
-        type="submit"
-        className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-      >
-        Register
-      </button>
+      <RegisterButton />
       <p>
         Already have an account?
         <Link href={"/login"}>
