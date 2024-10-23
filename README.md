@@ -23,3 +23,7 @@ in root directory create middleware
 then go to connection > adapter > prisma copy prima.ts configuration paste into your project
 update AUTH.TS
 under prisma copy schema and paste in schema.prisma
+### step 4
+create schema  then migrate your schema
+npx prisma migrate dev --name init
+then npx prisma studio
