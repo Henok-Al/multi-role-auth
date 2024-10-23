@@ -1,9 +1,13 @@
+"use client";
+
+import { useFormState } from "react-dom";
 import Link from "next/link";
-import React from "react";
+import { signUpCredentials } from "@/lib/actions";
 
 const FormRegister = () => {
+  const [state, formAction] = useFormState(signUpCredentials, null);
   return (
-    <form action="" className="space-y-6">
+    <form action={formAction} className="space-y-6">
       <div>
         <label
           htmlFor="name"
@@ -18,7 +22,9 @@ const FormRegister = () => {
           className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         />
         <div aria-live="polite" aria-atomic="true">
-          <span className="text-sm mt-2 text-red-500">message</span>
+          <span className="text-sm mt-2 text-red-500">
+            {state?.error?.name}
+          </span>
         </div>
       </div>
       <div>
@@ -35,7 +41,9 @@ const FormRegister = () => {
           className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         />
         <div aria-live="polite" aria-atomic="true">
-          <span className="text-sm mt-2 text-red-500">message</span>
+          <span className="text-sm mt-2 text-red-500">
+            {state?.error?.email}
+          </span>
         </div>
       </div>
       <div>
@@ -52,7 +60,9 @@ const FormRegister = () => {
           className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         />
         <div aria-live="polite" aria-atomic="true">
-          <span className="text-sm mt-2 text-red-500">message</span>
+          <span className="text-sm mt-2 text-red-500">
+            {state?.error?.password}
+          </span>
         </div>
       </div>
       <div>
@@ -69,7 +79,9 @@ const FormRegister = () => {
           className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         />
         <div aria-live="polite" aria-atomic="true">
-          <span className="text-sm mt-2 text-red-500">message</span>
+          <span className="text-sm mt-2 text-red-500">
+            {state?.error?.ConfirmPassword}
+          </span>
         </div>
       </div>
       <button

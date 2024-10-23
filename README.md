@@ -29,5 +29,11 @@ npx prisma migrate dev --name init
 then npx prisma studio
 
 ### step 5
-register page
+register page ui
+
+### step 6
+create validation and server action logic in zod.ts and action.ts 
+
+### step 7
+then use signUpCredentials in form-register page 
 
