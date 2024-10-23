@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### step 1.
 
-## Getting Started
+npm i -D prisma
+npm i @prisma/client
+npm i zod react-icons bcrypt-ts
 
-First, run the development server:
+npm i next-auth@beta
+npm i @auth/prisma-adapter
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+npx prisma init
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### step 2
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+got to vercel > storage > choose postgres and give a name create > env.local then copy and paste in your project > also go to prisma and copy url and directurl and paste in your project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### step 3
 
-## Learn More
+got to authjs installation
+in env add AUTH_SECRET=""
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+create route handler inside /app/api/auth/[...nextauth]/route.ts
+in root directory create middleware
+then go to connection > adapter > prisma copy prima.ts configuration paste into your project
+update AUTH.TS
+under prisma copy schema and paste in schema.prisma
