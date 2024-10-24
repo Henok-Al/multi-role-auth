@@ -1,14 +1,27 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import { useFormStatus } from "react-dom";
 
-export const RegisterButton = () => {
-  const { pending } = useFormState();
+export const LoginButton = () => {
+  const { pending } = useFormStatus();
   return (
     <button
       type="submit"
       disabled={pending}
-      className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+      className="w-full text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+    >
+      {pending ? "Authenticating..." : "Sign In"}
+    </button>
+  );
+};
+
+export const RegisterButton = () => {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="w-full text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 text-center"
     >
       {pending ? "Registering..." : "Register"}
     </button>
