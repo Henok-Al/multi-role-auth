@@ -50,3 +50,11 @@ customize session we got role and id
 
 to enable signin with google first got to https://console.cloud.google.com/ >
 new project >in sidebar api & services > credentials ![alt text](image.png) > click configuration consent screen button > choose external create > fill app name, email support ,dev contact > finaly save and continue > save and continue > back to dashboard > pusblish app > credentials >create credentials >OAuth client ID> appcn type(web) > name> authrized redirect url("http://localhost:3000/api/auth/callback/google) to get this got to authjs(authentication > OAuth >google copy callback) finaly create and copy client id and secret
+
+### step 10
+
+to enable signin with github
+first got to github > setting > dev setting > OAuth Apps > fill name, homepage url(localhost:3000), auth callback url(http://localhost:3000/api/auth/callback/github) > register application > copy client id & generate secret > paste in env
+
+### step 11
+to fix this error in your url(happen when you try to login with the same email weather in github or google) use search params and display the error message , basically we have replaced this error to "OAuthAccountNotLinked" to custom error message
