@@ -58,3 +58,8 @@ first got to github > setting > dev setting > OAuth Apps > fill name, homepage u
 
 ### step 11
 to fix this error in your url(happen when you try to login with the same email weather in github or google) use search params and display the error message , basically we have replaced this error to "OAuthAccountNotLinked" to custom error message
+
+### step 12 
+deployment
+add this under package.json under scripts
+    "postinstall": "prisma generate"
