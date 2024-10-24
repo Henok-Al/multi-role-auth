@@ -57,9 +57,19 @@ to enable signin with github
 first got to github > setting > dev setting > OAuth Apps > fill name, homepage url(localhost:3000), auth callback url(http://localhost:3000/api/auth/callback/github) > register application > copy client id & generate secret > paste in env
 
 ### step 11
+
 to fix this error in your url(happen when you try to login with the same email weather in github or google) use search params and display the error message , basically we have replaced this error to "OAuthAccountNotLinked" to custom error message
 
-### step 12 
+### step 12
+
 deployment
 add this under package.json under scripts
-    "postinstall": "prisma generate"
+"postinstall": "prisma generate"
+
+    ### step 13
+    copy deployed url(https://multi-role-auth.vercel.app) then go to google cloud console  ![alt text](image-1.png) then click on edit ![alt text](image-2.png)  then paste on authorized javascript origin(https://multi-role-auth.vercel.app) also in authorized redirect url replace(http://localhost:3000 to https://multi-role-auth.vercel.app ) finally save ![alt text](image-3.png)
+
+    ### step 14
+    copy deployed url(https://multi-role-auth.vercel.app) then go to githu.com auth app
+
+replace(http://localhost:3000 TO https://multi-role-auth.vercel.app) ![alt text](image-4.png) finally update application
