@@ -8,7 +8,7 @@ const Dashboard = async () => {
       <h2 className="text-xl">
         Welcome Back: <span>{session?.user?.name}</span>
       </h2>
-      <p>{JSON.stringify(session)}</p>
+      {/* <p>{JSON.stringify(session)}</p> */}
     </div>
   );
 };
