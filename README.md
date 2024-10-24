@@ -23,21 +23,30 @@ in root directory create middleware
 then go to connection > adapter > prisma copy prima.ts configuration paste into your project
 update AUTH.TS
 under prisma copy schema and paste in schema.prisma
+
 ### step 4
-create schema  then migrate your schema
+
+create schema then migrate your schema
 npx prisma migrate dev --name init
 then npx prisma studio
 
 ### step 5
+
 register page ui
 
 ### step 6
-create validation and server action logic in zod.ts and action.ts 
+
+create validation and server action logic in zod.ts and action.ts
 
 ### step 7
-then use signUpCredentials in form-register page 
 
-### step 7
+then use signUpCredentials in form-register page
+
+### step 8
+
 customize session we got role and id
 
+### step 9
 
+to enable signin with google first got to https://console.cloud.google.com/ >
+new project >in sidebar api & services > credentials ![alt text](image.png) > click configuration consent screen button > choose external create > fill app name, email support ,dev contact > finaly save and continue > save and continue > back to dashboard > pusblish app > credentials >create credentials >OAuth client ID> appcn type(web) > name> authrized redirect url("http://localhost:3000/api/auth/callback/google) to get this got to authjs(authentication > OAuth >google copy callback) finaly create and copy client id and secret
