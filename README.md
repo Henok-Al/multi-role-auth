@@ -37,3 +37,7 @@ create validation and server action logic in zod.ts and action.ts
 ### step 7
 then use signUpCredentials in form-register page 
 
+### step 7
+customize session we got role and id
+
+
