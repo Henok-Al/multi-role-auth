@@ -66,10 +66,12 @@ deployment
 add this under package.json under scripts
 "postinstall": "prisma generate"
 
-    ### step 13
+### step 13
+
     copy deployed url(https://multi-role-auth.vercel.app) then go to google cloud console  ![alt text](image-1.png) then click on edit ![alt text](image-2.png)  then paste on authorized javascript origin(https://multi-role-auth.vercel.app) also in authorized redirect url replace(http://localhost:3000 to https://multi-role-auth.vercel.app ) finally save ![alt text](image-3.png)
 
-    ### step 14
+### step 14
+
     copy deployed url(https://multi-role-auth.vercel.app) then go to githu.com auth app
 
 replace(http://localhost:3000 TO https://multi-role-auth.vercel.app) ![alt text](image-4.png) finally update application
